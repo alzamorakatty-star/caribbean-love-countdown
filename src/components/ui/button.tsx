@@ -18,9 +18,8 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        caribbean: "bg-coral text-white hover:bg-coral-dark transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl",
-        tropical: "bg-turquoise text-white hover:bg-turquoise-dark transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl",
-        festive: "bg-gradient-to-r from-coral to-turquoise text-white hover:from-coral-dark hover:to-turquoise-dark transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl",
+        elegant: "bg-coral-watercolor text-white hover:bg-coral-watercolor/90 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-playfair",
+        minimal: "border-2 border-text-primary text-text-primary hover:bg-text-primary hover:text-white transition-all duration-300 font-playfair",
       },
       size: {
         default: "h-10 px-4 py-2",

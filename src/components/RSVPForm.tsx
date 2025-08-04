@@ -33,7 +33,7 @@ const RSVPForm = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "¡Gracias! Thank you!",
+        title: "Thank you!",
         description: `We're so excited to ${formData.attendance === 'yes' ? 'celebrate with you' : 'have received your response'}!`,
       });
       
@@ -44,17 +44,16 @@ const RSVPForm = () => {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto bg-white/95 backdrop-blur-sm border-none shadow-xl">
-      <CardHeader className="text-center pb-4">
-        <CardTitle className="text-2xl font-bold text-foreground flex items-center justify-center gap-2">
-          <Heart className="text-coral w-6 h-6" />
-          Confirm Your Attendance
+    <Card className="w-full max-w-md mx-auto bg-white border border-muted shadow-elegant">
+      <CardHeader className="text-center pb-6">
+        <CardTitle className="text-2xl font-playfair font-semibold text-text-primary">
+          Confirm Attendance
         </CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="name" className="text-sm font-medium text-foreground">
+            <Label htmlFor="name" className="text-sm font-medium text-text-primary">
               Full Name
             </Label>
             <Input
@@ -62,14 +61,14 @@ const RSVPForm = () => {
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              placeholder="Your beautiful name"
-              className="border-2 border-muted focus:border-coral transition-colors"
+              placeholder="Your name"
+              className="border border-muted focus:border-coral-watercolor transition-colors font-playfair"
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-sm font-medium text-foreground">
-              Email
+            <Label htmlFor="email" className="text-sm font-medium text-text-primary">
+              Email Address
             </Label>
             <Input
               id="email"
@@ -77,28 +76,28 @@ const RSVPForm = () => {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               placeholder="your@email.com"
-              className="border-2 border-muted focus:border-turquoise transition-colors"
+              className="border border-muted focus:border-coral-watercolor transition-colors"
             />
           </div>
 
           <div className="space-y-3">
-            <Label className="text-sm font-medium text-foreground">
-              Will you join us for this magical celebration?
+            <Label className="text-sm font-medium text-text-primary">
+              Will you join us?
             </Label>
             <RadioGroup
               value={formData.attendance}
               onValueChange={(value) => setFormData({ ...formData, attendance: value })}
               className="grid grid-cols-2 gap-4"
             >
-              <div className="flex items-center space-x-2 p-3 rounded-lg border-2 border-muted hover:border-lime transition-colors cursor-pointer">
-                <RadioGroupItem value="yes" id="yes" className="text-lime" />
-                <Label htmlFor="yes" className="cursor-pointer font-medium">
-                  ¡Sí! / Yes!
+              <div className="flex items-center space-x-2 p-3 rounded-md border border-muted hover:border-sage-green transition-colors cursor-pointer">
+                <RadioGroupItem value="yes" id="yes" className="text-sage-green" />
+                <Label htmlFor="yes" className="cursor-pointer font-medium font-playfair">
+                  Yes!
                 </Label>
               </div>
-              <div className="flex items-center space-x-2 p-3 rounded-lg border-2 border-muted hover:border-coral transition-colors cursor-pointer">
-                <RadioGroupItem value="no" id="no" className="text-coral" />
-                <Label htmlFor="no" className="cursor-pointer font-medium">
+              <div className="flex items-center space-x-2 p-3 rounded-md border border-muted hover:border-coral-watercolor transition-colors cursor-pointer">
+                <RadioGroupItem value="no" id="no" className="text-coral-watercolor" />
+                <Label htmlFor="no" className="cursor-pointer font-medium font-playfair">
                   Can't make it
                 </Label>
               </div>
@@ -108,7 +107,8 @@ const RSVPForm = () => {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-coral hover:bg-coral-dark text-white font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            variant="elegant"
+            className="w-full py-3 text-base"
           >
             {isSubmitting ? (
               "Sending..."
