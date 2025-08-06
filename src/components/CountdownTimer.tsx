@@ -33,25 +33,29 @@ const CountdownTimer = () => {
   }, []);
 
   const timeUnits = [
-    { label: 'Days', value: timeLeft.days },
-    { label: 'Hours', value: timeLeft.hours },
-    { label: 'Minutes', value: timeLeft.minutes },
-    { label: 'Seconds', value: timeLeft.seconds },
+    { label: 'Days', value: timeLeft.days, color: 'bg-coral' },
+    { label: 'Hours', value: timeLeft.hours, color: 'bg-turquoise' },
+    { label: 'Minutes', value: timeLeft.minutes, color: 'bg-caribbean-yellow' },
+    { label: 'Seconds', value: timeLeft.seconds, color: 'bg-lime' },
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-6 md:gap-8 mt-8">
+    <div className="flex flex-wrap justify-center gap-4 md:gap-8">
       {timeUnits.map((unit, index) => (
         <div 
           key={unit.label}
-          className="text-center transform transition-all duration-300 hover:scale-105 animate-fade-in"
-          style={{ animationDelay: `${index * 0.2}s` }}
+          className={`
+            ${unit.color} text-white rounded-2xl p-4 md:p-6 min-w-[100px] md:min-w-[120px]
+            transform transition-all duration-300 hover:scale-105 
+            shadow-lg hover:shadow-xl animate-scale-in
+          `}
+          style={{ animationDelay: `${index * 0.1}s` }}
         >
-          <div className="bg-white rounded-lg p-4 md:p-6 min-w-[80px] md:min-w-[100px] shadow-elegant border border-muted">
-            <div className="text-2xl md:text-4xl font-bold font-playfair text-text-primary mb-1">
+          <div className="text-center">
+            <div className="text-2xl md:text-4xl font-bold font-mono">
               {unit.value.toString().padStart(2, '0')}
             </div>
-            <div className="text-xs md:text-sm font-medium text-text-secondary uppercase tracking-wider">
+            <div className="text-sm md:text-base font-medium mt-1 opacity-90">
               {unit.label}
             </div>
           </div>

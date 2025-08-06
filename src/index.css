@@ -8,62 +8,65 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Elegant Minimalist Palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
+    /* Caribbean Color Palette */
+    --background: 185 15% 97%;
+    --foreground: 342 30% 15%;
     
-    /* Watercolor Accent Colors */
-    --coral-watercolor: 14 78% 70%;
-    --coral-light: 14 85% 85%;
-    --warm-yellow: 45 95% 75%;
-    --warm-yellow-light: 45 100% 90%;
-    --sage-green: 140 25% 65%;
-    --sage-light: 140 30% 85%;
+    /* Caribbean Primary Colors */
+    --coral: 12 88% 68%;
+    --coral-light: 12 95% 82%;
+    --coral-dark: 12 85% 55%;
     
-    /* Elegant Text Colors */
-    --text-primary: 0 0% 8%;
-    --text-secondary: 0 0% 35%;
-    --text-accent: 14 78% 60%;
+    --turquoise: 185 84% 55%;
+    --turquoise-light: 185 78% 72%;
+    --turquoise-dark: 185 88% 42%;
+    
+    --caribbean-yellow: 52 98% 68%;
+    --caribbean-yellow-light: 52 100% 85%;
+    
+    --lime: 82 85% 58%;
+    --lime-light: 82 78% 72%;
     
     /* Design System Colors */
-    --primary: var(--text-primary);
+    --primary: var(--coral);
     --primary-foreground: 0 0% 100%;
     
-    --secondary: var(--coral-watercolor);
+    --secondary: var(--turquoise);
     --secondary-foreground: 0 0% 100%;
     
-    --accent: var(--warm-yellow);
-    --accent-foreground: var(--text-primary);
+    --accent: var(--caribbean-yellow);
+    --accent-foreground: 342 30% 15%;
     
-    --success: var(--sage-green);
-    --success-foreground: 0 0% 100%;
+    --success: var(--lime);
+    --success-foreground: 342 30% 15%;
     
-    /* Subtle Gradients */
-    --gradient-elegant: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--warm-yellow-light)) 100%);
-    --gradient-floral: linear-gradient(180deg, hsl(var(--coral-light)) 0%, hsl(var(--warm-yellow-light)) 50%, hsl(var(--sage-light)) 100%);
+    /* Gradients */
+    --gradient-caribbean: linear-gradient(135deg, hsl(var(--coral)) 0%, hsl(var(--turquoise)) 50%, hsl(var(--caribbean-yellow)) 100%);
+    --gradient-sunset: linear-gradient(180deg, hsl(var(--coral)) 0%, hsl(var(--caribbean-yellow)) 100%);
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--turquoise)) 0%, hsl(var(--turquoise-dark)) 100%);
     
-    /* Elegant Shadows */
-    --shadow-soft: 0 4px 20px -8px hsl(var(--text-primary) / 0.1);
-    --shadow-elegant: 0 8px 30px -12px hsl(var(--text-primary) / 0.15);
-    --shadow-floral: 0 12px 40px -16px hsl(var(--coral-watercolor) / 0.2);
+    /* Shadows with Caribbean glow */
+    --shadow-coral: 0 10px 30px -10px hsl(var(--coral) / 0.3);
+    --shadow-turquoise: 0 10px 30px -10px hsl(var(--turquoise) / 0.3);
+    --shadow-festive: 0 20px 40px -15px hsl(var(--coral) / 0.2), 0 10px 20px -10px hsl(var(--turquoise) / 0.2);
     
-    /* Refined Animations */
-    --transition-elegant: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-soft: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Animations */
+    --transition-festive: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
     /* Card and UI Elements */
     --card: 0 0% 100%;
-    --card-foreground: var(--text-primary);
+    --card-foreground: 342 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: var(--text-primary);
+    --popover-foreground: 342 30% 15%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: var(--text-secondary);
+    --muted: 185 15% 92%;
+    --muted-foreground: 342 20% 45%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: var(--coral-watercolor);
+    --border: 185 20% 88%;
+    --input: 185 20% 88%;
+    --ring: var(--coral);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;

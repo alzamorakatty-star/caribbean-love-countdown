@@ -1,7 +1,7 @@
-import ElegantWeddingPage from './ElegantWeddingPage';
+import WeddingPage from './WeddingPage';
 
 const Index = () => {
-  return <ElegantWeddingPage />;
+  return <WeddingPage />;
 };
 
 export default Index;
